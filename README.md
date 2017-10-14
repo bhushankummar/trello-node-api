@@ -34,5 +34,8 @@ Set your API Key and Secret/Oauth Token.
 var trelloNode = require('trello-node-api')(apiKey, oauthToken);
 ```
 
+##### It does supports Standard Endpoints of Action, Boards, Cards, Checklists, Enterprises, Labels, Lists, Members, Notifications, Organizations, Webhooks
+
+##### Feel free to create Issue for any help !
 
 Originally by [Bhushankumar Lilapara](https://github.com/bhushankumarl) (bhushankumar.lilapara@gmail.com).

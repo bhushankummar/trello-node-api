@@ -1,5 +1,5 @@
 {
-  "name": "trello",
+  "name": "trello-node-api",
   "version": "0.0.1",
   "description": "Trello Node API wrapper",
   "keywords": [
@@ -23,7 +23,7 @@
     "trello-organizations",
     "trello-webhooks"
   ],
-  "homepage": "https://github.com/bhushankumarl/amazon-mws",
+  "homepage": "https://github.com/bhushankumarl/trello-node-api",
   "author": "Bhushankumar Lilapara<bhushankumar.lilapara@gmail.com>",
   "contributors": [
     "Bhushankumar Lilapara (bhushankumar.lilapara@gmail.com)"
