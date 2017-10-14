@@ -28,7 +28,7 @@ $ npm install
 
 ## Configuration
 
-Set your Access Key and Access Secret.
+Set your API Key and Secret/Oauth Token.
 
 ```js
 var trelloNode = require('trello-node-api')(apiKey, oauthToken);
