@@ -1,18 +1,29 @@
 // Type definitions for trello-node-api
 
+declare class trelloNodeApi {
 
-/**
- *
- */
-declare namespace trelloNodeApi {
+    constructor()
 
-    interface board {
-        search(value: string);
-    }
+    constructor(key: string, token: string);
 
-    function setApiKey(value: string);
+    setApiKey(value: string);
 
-    function setOauthToken(value: string);
+    setOauthToken(value: string);
+
+    board: TrelloBoard;
+
+}
+
+declare class TrelloBoard {
+    search(value: string): Promise<any>;
+}
+
+export class TrelloError extends Error {
+    constructor(message: string);
+
+    static create(options: Object): TrelloError;
+
+    code?: number;
 }
 
 export = trelloNodeApi;
