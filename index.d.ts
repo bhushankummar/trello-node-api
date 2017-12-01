@@ -1,6 +1,6 @@
 // Type definitions for trello-node-api
 
-declare class trelloNodeApi {
+declare class TrelloNodeApi {
 
     constructor()
 
@@ -26,4 +26,8 @@ export class TrelloError extends Error {
     code?: number;
 }
 
-export = trelloNodeApi;
+declare namespace TrelloNodeApi {
+
+}
+
+export = TrelloNodeApi;
