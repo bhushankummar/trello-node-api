@@ -4,7 +4,7 @@ var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
 var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var boardRequest = function () {
-    Trello.board.searchField('5a215045dec30f3c34147275', 'url').then(function (response) {
+    Trello.board.searchField('BOARD_ID', 'FIELD_NAME').then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);
