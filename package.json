@@ -1,6 +1,6 @@
 {
   "name": "trello-node-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Trello Node API wrapper",
   "keywords": [
     "node-trello",
@@ -21,7 +21,9 @@
     "trello-members",
     "trello-notifications",
     "trello-organizations",
-    "trello-webhooks"
+    "trello-webhooks",
+    "trello-typescript",
+    "trello-es6"
   ],
   "homepage": "https://github.com/bhushankumarl/trello-node-api",
   "author": "Bhushankumar Lilapara<bhushankumar.lilapara@gmail.com>",

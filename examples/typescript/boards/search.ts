@@ -1,10 +1,13 @@
 const apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
 const oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+import * as TrelloNodeAPI from 'trello-node-api';
 
-let trelloNode = require('../../lib/trello-node-api')(apiKey, oauthToken);
+const Trello = new TrelloNodeAPI();
 
 let boardRequest = async function () {
-    let response = await trelloNode.board.search('ABCD').catch(error => {
+    Trello.setApiKey(apiKey);
+    Trello.setOauthToken(oauthToken);
+    let response = await Trello.board.search('ABCD').catch(error => {
         if (error) {
             console.log('error ', error);
         }
