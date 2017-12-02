@@ -1,4 +1,4 @@
-0.0.3
+0.0.3 December 02, 2017
   - Add support for TypeScript
   - Add JavaScript examples
   - Add TypeScript examples
