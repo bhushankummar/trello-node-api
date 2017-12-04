@@ -3,12 +3,18 @@ var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
 
 var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
-var boardRequest = function () {
-    Trello.board.search('5a24dff1a9daada4bbb5ec2c').then(function (response) {
+var checklistRequest = function () {
+    var data = {
+        idCard: 'CARD_ID', // required
+        name: 'CHECKLIST_NAME',
+        pos: 1
+    };
+
+    Trello.checklist.create(data).then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);
     });
 };
 
-boardRequest();
+checklistRequest();
