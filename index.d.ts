@@ -55,6 +55,14 @@ declare class TrelloLabel {
 
 declare class TrelloList {
 
+    create(params: any): Promise<any>;
+
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
 }
 
 declare class TrelloMember {
