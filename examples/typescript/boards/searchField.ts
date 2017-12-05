@@ -7,7 +7,7 @@ const Trello = new TrelloNodeAPI();
 let boardRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let response = await Trello.board.search('BOARD_ID').catch(error => {
+    let response = await Trello.board.searchField('BOARD_ID', 'FIELD_NAME').catch(error => {
         if (error) {
             console.log('error ', error);
         }
