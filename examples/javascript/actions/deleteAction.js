@@ -4,7 +4,7 @@ var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
 var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var actionRequest = function () {
-    Trello.action.del('5a24e0c2a57b5030d2213398').then(function (response) {
+    Trello.action.del('ACTION_ID').then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);

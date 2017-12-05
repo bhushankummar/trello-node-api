@@ -19,11 +19,7 @@ var cardRequest = function () {
         keepFromSource: false,
 
     };
-    var testData = {
-        name: 'CARD_NAME',
-        idList: 'LIST_ID',
-    };
-    Trello.card.create(testData).then(function (response) {
+    Trello.card.create(data).then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);

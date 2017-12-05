@@ -7,7 +7,7 @@ var labelRequest = function () {
     var data = {
         name: 'LABEL_NAME',
         color: 'orange',
-        idBoard: '5a24dff1a9daada4bbb5ec2c'
+        idBoard: 'BOARD_ID'
     };
     Trello.label.create(data).then(function (response) {
         console.log('response ', response);
