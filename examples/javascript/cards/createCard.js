@@ -8,15 +8,15 @@ var cardRequest = function () {
         name: 'CARD_NAME',
         desc: 'Card description',
         pos: 'top',
+        idList: 'LIST_ID', //required
         due: false,
         dueComplete: false,
-        idList: 'LIST_ID', //required
-        idMembers: false,
-        idLabels: '',
+        idMembers: ['MEMBER_ID', 'MEMBER_ID', 'MEMBER_ID'],
+        idLabels: ['LABEL_ID', 'LABEL_ID', 'LABEL_ID'],
         urlSource: '',
         fileSource: '',
         idCardSource: '',
-        keepFromSource: false,
+        keepFromSource: '',
 
     };
     Trello.card.create(data).then(function (response) {

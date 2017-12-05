@@ -6,13 +6,13 @@ var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 var cardRequest = function () {
     var id = 'CARD_ID';
     var data = {
-        name: 'CARD_NAME',
-        desc: 'Card Description',
+        name: 'CARD_NAME_TEST',
+        desc: 'Card description',
         closed: false,
-        idMembers: false,
-        idAttachmentCover: false,
-        idList: false,
-        idLabels: false,
+        idMembers: 'MEMBER_ID,MEMBER_ID,MEMBER_ID',
+        idAttachmentCover: '',
+        idList: '',
+        idLabels: 'LABEL_ID, LABEL_ID, LABEL_ID',
         idBoard: false,
         pos: 'top',
         due: null,
