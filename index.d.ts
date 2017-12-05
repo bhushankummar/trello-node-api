@@ -67,6 +67,10 @@ declare class TrelloList {
 
 declare class TrelloMember {
 
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
 }
 
 declare class TrelloNotification {
