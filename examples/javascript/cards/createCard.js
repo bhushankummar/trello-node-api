@@ -17,7 +17,6 @@ var cardRequest = function () {
         fileSource: '',
         idCardSource: '',
         keepFromSource: '',
-
     };
     Trello.card.create(data).then(function (response) {
         console.log('response ', response);
