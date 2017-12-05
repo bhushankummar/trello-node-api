@@ -15,6 +15,14 @@ class BasicMethod {
 
 declare class TrelloAction {
 
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
+    del(boardId: string): Promise<any>;
+
 }
 
 declare class TrelloBoard extends BasicMethod {
