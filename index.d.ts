@@ -43,6 +43,14 @@ declare class TrelloEnterprise {
 
 declare class TrelloLabel {
 
+    create(params: any): Promise<any>;
+
+    search(value: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
+    del(boardId: string): Promise<any>;
+
 }
 
 declare class TrelloList {
