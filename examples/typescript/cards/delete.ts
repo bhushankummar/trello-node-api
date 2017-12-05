@@ -7,7 +7,7 @@ const Trello = new TrelloNodeAPI();
 let cardRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let response = await Trello.card.del('5a268f25d685cc7b157e822d').catch(error => {
+    let response = await Trello.card.del('CARD_ID').catch(error => {
         if (error) {
             console.log('error ', error);
         }
