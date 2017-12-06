@@ -7,7 +7,7 @@ var webhookRequest = function () {
     var data = {
         description: 'Webhook description',
         callbackURL: 'https://mycallbackurl.com/', // REQUIRED
-        idModel: '57d129b0c94ff08983708ab1', // REQUIRED
+        idModel: 'MODEL_ID', // REQUIRED
         active: false
     };
     Trello.webhook.create(data).then(function (response) {

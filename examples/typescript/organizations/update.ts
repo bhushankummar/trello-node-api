@@ -9,6 +9,7 @@ let organizationRequest = async function () {
     Trello.setOauthToken(oauthToken);
     let id = 'ORGANIZATION_ID';
     let  data = {
+        name: 'or123',
         displayName: 'ORGANIZATION_DISPLAY_NAME',
         desc: 'Organization descriptions',
         website: '',
