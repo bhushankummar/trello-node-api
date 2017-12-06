@@ -1,50 +1,52 @@
 {
-  "name": "trello-node-api",
-  "version": "0.0.4",
-  "description": "Trello Node API wrapper",
-  "keywords": [
-    "node-trello",
-    "node-trello-api",
-    "trello-node-api",
-    "trello-api",
-    "trello-sdk",
-    "trelloo-client",
-    "trello-node",
-    "trello",
-    "trello-actions",
-    "trello-boards",
-    "trello-cards",
-    "trello-checklists",
-    "trello-enterprises",
-    "trello-labels",
-    "trello-lists",
-    "trello-members",
-    "trello-notifications",
-    "trello-organizations",
-    "trello-webhooks",
-    "trello-typescript",
-    "trello-es6"
-  ],
-  "homepage": "https://github.com/bhushankumarl/trello-node-api",
-  "author": "Bhushankumar Lilapara<bhushankumar.lilapara@gmail.com>",
-  "contributors": [
-    "Bhushankumar Lilapara (bhushankumar.lilapara@gmail.com)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bhushankumarl/trello-node-api"
-  },
-  "bugs:": "https://github.com/bhushankumarl/trello-node-api/issues",
-  "engines": {
-    "node": ">=4"
-  },
-  "main": "lib/trello-node-api",
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "lodash.isplainobject": "^4.0.6",
-    "qs": "~6.5.1",
-    "safe-buffer": "^5.1.1"
-  },
-  "license": "MIT",
-  "scripts": {}
+    "name": "trello-node-api",
+    "version": "0.0.5",
+    "description": "Trello Node API wrapper",
+    "keywords": [
+        "node-trello",
+        "node-trello-api",
+        "trello-node-api",
+        "trello-api",
+        "trello-sdk",
+        "trelloo-client",
+        "trello-node",
+        "trello",
+        "trello-actions",
+        "trello-boards",
+        "trello-cards",
+        "trello-checklists",
+        "trello-enterprises",
+        "trello-labels",
+        "trello-lists",
+        "trello-members",
+        "trello-notifications",
+        "trello-organizations",
+        "trello-webhooks",
+        "trello-typescript",
+        "trello-es6"
+    ],
+    "homepage": "https://github.com/bhushankumarl/trello-node-api",
+    "author": "Bhushankumar Lilapara<bhushankumar.lilapara@gmail.com>",
+    "contributors": [
+        "Bhushankumar Lilapara (bhushankumar.lilapara@gmail.com)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bhushankumarl/trello-node-api"
+    },
+    "bugs:": "https://github.com/bhushankumarl/trello-node-api/issues",
+    "engines": {
+        "node": ">=4"
+    },
+    "main": "lib/trello-node-api",
+    "dependencies": {
+        "bluebird": "^3.5.0",
+        "lodash.isplainobject": "^4.0.6",
+        "qs": "~6.5.1",
+        "safe-buffer": "^5.1.1"
+    },
+    "license": "MIT",
+    "scripts": {
+        "lint": "tsc index.d.ts"
+    }
 }

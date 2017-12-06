@@ -1,21 +1,22 @@
 // Type definitions for trello-node-api
 
-class BasicMethod {
+declare class TrelloAction {
+
+    search(actionId: string): Promise<any>;
+
+    searchField(actionId: string, fieldName: string): Promise<any>;
+
+    update(actionId: string, params: any): Promise<any>;
+
+    del(actionId: string): Promise<any>;
+
+}
+
+declare class TrelloBoard {
 
     create(params: any): Promise<any>;
 
-    search(value: string): Promise<any>;
-
-    searchField(boardId: string, fieldName: string): Promise<any>;
-
-    update(boardId: string, params: any): Promise<any>;
-
-    del(boardId: string): Promise<any>;
-}
-
-declare class TrelloAction {
-
-    search(value: string): Promise<any>;
+    search(boardId: string): Promise<any>;
 
     searchField(boardId: string, fieldName: string): Promise<any>;
 
@@ -23,23 +24,41 @@ declare class TrelloAction {
 
     del(boardId: string): Promise<any>;
 
-}
-
-declare class TrelloBoard extends BasicMethod {
+    searchCards(boardId: string): Promise<any>;
 
 }
 
-declare class TrelloCard extends BasicMethod {
+declare class TrelloCard {
+
+    create(params: any): Promise<any>;
+
+    search(cardId: string): Promise<any>;
+
+    searchField(cardId: string, fieldName: string): Promise<any>;
+
+    update(cardId: string, params: any): Promise<any>;
+
+    del(cardId: string): Promise<any>;
 
 }
 
-declare class TrelloChecklist extends BasicMethod {
+declare class TrelloChecklist {
+
+    create(params: any): Promise<any>;
+
+    search(checklistId: string): Promise<any>;
+
+    searchField(checklistId: string, fieldName: string): Promise<any>;
+
+    update(checklistId: string, params: any): Promise<any>;
+
+    del(checklistId: string): Promise<any>;
 
 }
 
 declare class TrelloEnterprise {
 
-    search(value: string): Promise<any>;
+    search(enterpriseID: string): Promise<any>;
 
 }
 
@@ -47,11 +66,11 @@ declare class TrelloLabel {
 
     create(params: any): Promise<any>;
 
-    search(value: string): Promise<any>;
+    search(labelId: string): Promise<any>;
 
-    update(boardId: string, params: any): Promise<any>;
+    update(labelId: string, params: any): Promise<any>;
 
-    del(boardId: string): Promise<any>;
+    del(labelId: string): Promise<any>;
 
 }
 
@@ -59,37 +78,59 @@ declare class TrelloList {
 
     create(params: any): Promise<any>;
 
-    search(value: string): Promise<any>;
+    search(listId: string): Promise<any>;
 
-    searchField(boardId: string, fieldName: string): Promise<any>;
+    searchField(listId: string, fieldName: string): Promise<any>;
 
-    update(boardId: string, params: any): Promise<any>;
+    update(listId: string, params: any): Promise<any>;
 
 }
 
 declare class TrelloMember {
 
-    search(value: string): Promise<any>;
+    search(memberId: string): Promise<any>;
 
-    searchField(boardId: string, fieldName: string): Promise<any>;
+    searchField(memberId: string, fieldName: string): Promise<any>;
+
+    searchBoards(memberId: string): Promise<any>;
 
 }
 
 declare class TrelloNotification {
 
-    search(value: string): Promise<any>;
+    search(notificationId: string): Promise<any>;
 
-    searchField(boardId: string, fieldName: string): Promise<any>;
+    searchField(notificationId: string, fieldName: string): Promise<any>;
 
-    update(boardId: string, params: any): Promise<any>;
-
-}
-
-declare class TrelloOrganization extends BasicMethod {
+    update(notificationId: string, params: any): Promise<any>;
 
 }
 
-declare class TrelloWebhook extends BasicMethod {
+declare class TrelloOrganization {
+
+    create(params: any): Promise<any>;
+
+    search(organizationId: string): Promise<any>;
+
+    searchField(organizationId: string, fieldName: string): Promise<any>;
+
+    update(organizationId: string, params: any): Promise<any>;
+
+    del(organizationId: string): Promise<any>;
+
+}
+
+declare class TrelloWebhook {
+
+    create(params: any): Promise<any>;
+
+    search(webhookId: string): Promise<any>;
+
+    searchField(webhookId: string, fieldName: string): Promise<any>;
+
+    update(webhookId: string, params: any): Promise<any>;
+
+    del(webhookId: string): Promise<any>;
 
 }
 
@@ -100,9 +141,9 @@ declare class TrelloNodeApi {
 
     constructor(key: string, token: string);
 
-    setApiKey(key: string);
+    setApiKey(key: string): void;
 
-    setOauthToken(token: string);
+    setOauthToken(token: string): void;
 
     action: TrelloAction;
     board: TrelloBoard;
@@ -119,7 +160,7 @@ declare class TrelloNodeApi {
 }
 
 
-export class TrelloError extends Error {
+declare class TrelloError extends Error {
     constructor(message: string);
 
     static create(options: Object): TrelloError;
