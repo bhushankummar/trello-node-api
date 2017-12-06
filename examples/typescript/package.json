@@ -8,7 +8,7 @@
     "@types/es6-promise": "0.0.33",
     "babel-eslint": "^8.0.1",
     "babel-preset-node6": "^11.0.0",
-    "trello-node-api": "0.0.2"
+    "trello-node-api": "^0.0.4"
   },
   "devDependencies": {}
 }

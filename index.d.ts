@@ -15,6 +15,14 @@ class BasicMethod {
 
 declare class TrelloAction {
 
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
+    del(boardId: string): Promise<any>;
+
 }
 
 declare class TrelloBoard extends BasicMethod {
@@ -31,21 +39,49 @@ declare class TrelloChecklist extends BasicMethod {
 
 declare class TrelloEnterprise {
 
+    search(value: string): Promise<any>;
+
 }
 
 declare class TrelloLabel {
+
+    create(params: any): Promise<any>;
+
+    search(value: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
+    del(boardId: string): Promise<any>;
 
 }
 
 declare class TrelloList {
 
+    create(params: any): Promise<any>;
+
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
+
 }
 
 declare class TrelloMember {
 
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
 }
 
 declare class TrelloNotification {
+
+    search(value: string): Promise<any>;
+
+    searchField(boardId: string, fieldName: string): Promise<any>;
+
+    update(boardId: string, params: any): Promise<any>;
 
 }
 

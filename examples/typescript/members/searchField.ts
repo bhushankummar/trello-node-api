@@ -4,10 +4,10 @@ import * as TrelloNodeAPI from 'trello-node-api';
 
 const Trello = new TrelloNodeAPI();
 
-let boardRequest = async function () {
+let memberRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let response = await Trello.board.search('BOARD_ID').catch(error => {
+    let response = await Trello.member.searchField('MEMBER_ID', 'FIELD_NAME').catch(error => {
         if (error) {
             console.log('error ', error);
         }
@@ -16,4 +16,4 @@ let boardRequest = async function () {
     console.log('response', response);
 };
 
-boardRequest();
+memberRequest();

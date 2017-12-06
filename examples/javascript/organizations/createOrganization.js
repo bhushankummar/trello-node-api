@@ -1,0 +1,20 @@
+var apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
+var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+
+var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
+
+var organizationsRequest = function () {
+    var data = {
+        displayName: 'ORGANIZATION_NAME', // REQUIRED
+        desc: 'Organization description',
+        name: 'NAME',
+        website: 'https://example.com'
+    };
+    Trello.organization.create(data).then(function (response) {
+        console.log('response ', response);
+    }).catch(function (error) {
+        console.log('error', error);
+    });
+};
+
+organizationsRequest();

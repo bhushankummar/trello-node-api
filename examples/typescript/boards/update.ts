@@ -1,12 +1,15 @@
-var apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
-var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+const apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
+const oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+import * as TrelloNodeAPI from 'trello-node-api';
 
-var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
+const Trello = new TrelloNodeAPI();
 
-var boardRequest = function () {
-    var id = 'BOARD_ID';
-    var data = {
-        name: 'BOARD',
+let boardRequest = async function () {
+    Trello.setApiKey(apiKey);
+    Trello.setOauthToken(oauthToken);
+    let id = 'BOARD_ID';
+    let data = {
+        name: 'BOARD_TEST',
         desc: 'Board descriptions',
         closed: false,
         subscribed: false,
@@ -27,12 +30,13 @@ var boardRequest = function () {
         labelNames_purple: '',
         labelNames_blue: ''
     };
-
-    Trello.board.update(id, data).then(function (response) {
-        console.log('response ', response);
-    }).catch(function (error) {
-        console.log('error', error);
+    let response = await Trello.board.update(id, data).catch(error => {
+        if (error) {
+            console.log('error ', error);
+        }
     });
+
+    console.log('response', response);
 };
 
 boardRequest();

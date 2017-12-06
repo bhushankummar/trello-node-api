@@ -4,10 +4,12 @@ import * as TrelloNodeAPI from 'trello-node-api';
 
 const Trello = new TrelloNodeAPI();
 
-let boardRequest = async function () {
+let labelRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let response = await Trello.board.search('BOARD_ID').catch(error => {
+    let id = 'LABEL_ID';
+    let data = {name: 'NAME', color: 'red'};
+    let response = await Trello.label.update(id, data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
@@ -16,4 +18,4 @@ let boardRequest = async function () {
     console.log('response', response);
 };
 
-boardRequest();
+labelRequest();

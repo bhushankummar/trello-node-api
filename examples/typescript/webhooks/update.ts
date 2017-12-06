@@ -4,10 +4,18 @@ import * as TrelloNodeAPI from 'trello-node-api';
 
 const Trello = new TrelloNodeAPI();
 
-let boardRequest = async function () {
+let webhookRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let response = await Trello.board.search('BOARD_ID').catch(error => {
+    let id = 'WEBHOOK_ID';
+    let data = {
+        displayName: 'ORGANIZATION_DISPLAY_NAME',
+        description: 'Webhook descriptions',
+        callbackURL: '',
+        idModel: 'MODEL_ID',
+        active: false
+    };
+    let response = await Trello.webhook.update(id, data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
@@ -16,4 +24,4 @@ let boardRequest = async function () {
     console.log('response', response);
 };
 
-boardRequest();
+webhookRequest();
