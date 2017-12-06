@@ -39,6 +39,8 @@ declare class TrelloChecklist extends BasicMethod {
 
 declare class TrelloEnterprise {
 
+    search(value: string): Promise<any>;
+
 }
 
 declare class TrelloLabel {
