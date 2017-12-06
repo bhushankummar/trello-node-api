@@ -1,3 +1,7 @@
+0.0.4 December 06, 2017
+  - Add JavaScript examples : Card, Action, Labels, Webhook etc
+  - Add TypeScript examples : Boards, Card, Action, Labels, Webhook etc
+
 0.0.3 December 02, 2017
   - Add support for TypeScript
   - Add JavaScript examples
