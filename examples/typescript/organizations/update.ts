@@ -1,0 +1,33 @@
+const apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
+const oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+import * as TrelloNodeAPI from 'trello-node-api';
+
+const Trello = new TrelloNodeAPI();
+
+let organizationRequest = async function () {
+    Trello.setApiKey(apiKey);
+    Trello.setOauthToken(oauthToken);
+    let id = 'ORGANIZATION_ID';
+    let  data = {
+        displayName: 'ORGANIZATION_DISPLAY_NAME',
+        desc: 'Organization descriptions',
+        website: '',
+        prefs_associatedDomain: '',
+        prefs_externalMembersDisabled: false,
+        prefs_googleAppsVersion: 1,
+        prefs_boardVisibilityRestrict_org: 'none',
+        prefs_boardVisibilityRestrict_private: 'none',
+        prefs_boardVisibilityRestrict_public: 'none',
+        prefs_orgInviteRestrict: '*.test.com',
+        prefs_permissionLevel: 'public'
+    };
+    let response = await Trello.organization.update(id, data).catch(error => {
+        if (error) {
+            console.log('error ', error);
+        }
+    });
+
+    console.log('response', response);
+};
+
+organizationRequest();
