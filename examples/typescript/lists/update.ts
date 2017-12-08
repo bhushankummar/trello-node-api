@@ -7,7 +7,7 @@ const Trello = new TrelloNodeAPI();
 let listRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'LIST_ID';
+    let id = 'LIST_ID'; // REQUIRED
     let data = {
         name: 'LIST_NAME',
         closed: false,
@@ -19,7 +19,6 @@ let listRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

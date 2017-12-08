@@ -7,7 +7,7 @@ const Trello = new TrelloNodeAPI();
 let notificationRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'NOTIFICATION_ID';
+    let id = 'NOTIFICATION_ID'; // REQUIRED
     let data = {
         unread: false
     };
@@ -16,7 +16,6 @@ let notificationRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

@@ -8,7 +8,7 @@ let checklistRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
     let data = {
-        idCard: 'CARD_ID', // required
+        idCard: 'CARD_ID', // REQUIRED
         name: 'CHECKLIST_NAME',
         pos: 1
     };
@@ -17,7 +17,6 @@ let checklistRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

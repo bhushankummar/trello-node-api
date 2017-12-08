@@ -8,9 +8,9 @@ let listRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
     let data = {
-        name: 'LIST_NAME',
-        idBoard: 'BOARD_ID',
-        idListSource: '',
+        name: 'LIST_NAME', // REQUIRED
+        idBoard: 'BOARD_ID', // REQUIRED
+        idListSource: 'LIST_ID',
         pos: 'top'
     };
     let response = await Trello.list.create(data).catch(error => {
@@ -18,7 +18,6 @@ let listRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

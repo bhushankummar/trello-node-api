@@ -5,12 +5,12 @@ var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var boardRequest = function () {
     var data = {
-        name: 'BOARD',
+        name: 'BOARD_NAME', // REQUIRED
         defaultLabels: false,
         defaultLists: false,
         desc: 'Board description.',
-        idOrganization: 'BOARD123456789',
-        idBoardSource: 'BOARD123456789',
+        idOrganization: 'ORGANIZATION_ID',
+        idBoardSource: 'BOARD_ID',
         keepFromSource: 'none',
         powerUps: 'all',
         prefs_permissionLevel: 'private',

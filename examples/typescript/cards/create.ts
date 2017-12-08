@@ -11,22 +11,21 @@ let cardRequest = async function () {
         name: 'CARD_NAME',
         desc: 'Card description',
         pos: 'top',
-        idList: 'LIST_ID', //required
-        due: false,
+        idList: 'LIST_ID', //REQUIRED
+        due: null,
         dueComplete: false,
         idMembers: ['MEMBER_ID', 'MEMBER_ID', 'MEMBER_ID'],
         idLabels: ['LABEL_ID', 'LABEL_ID', 'LABEL_ID'],
-        urlSource: '',
-        fileSource: '',
-        idCardSource: '',
-        keepFromSource: '',
+        urlSource: 'https://example.com',
+        fileSource: 'file',
+        idCardSource: 'CARD_ID',
+        keepFromSource: 'attachments,checklists,comments,due,labels,members,stickers'
     };
     let response = await Trello.card.create(data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

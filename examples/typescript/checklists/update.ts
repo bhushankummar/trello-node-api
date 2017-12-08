@@ -7,7 +7,7 @@ const Trello = new TrelloNodeAPI();
 let checklistRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'CHECKLIST_ID';
+    let id = 'CHECKLIST_ID'; // REQUIRED
     let data = {
         name: 'CHECKLIST_NAME',
         pos: 'top'
@@ -17,7 +17,6 @@ let checklistRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 
