@@ -4,8 +4,7 @@ var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
 var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var webhookRequest = function () {
-    var id = 'WEBHOOK_ID';
-    Trello.webhook.del(id).then(function (response) {
+    Trello.webhook.del('WEBHOOK_ID').then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);

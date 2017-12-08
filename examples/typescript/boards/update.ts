@@ -7,13 +7,13 @@ const Trello = new TrelloNodeAPI();
 let boardRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'BOARD_ID';
+    let id = 'BOARD_ID'; // REQUIRED
     let data = {
-        name: 'BOARD_TEST',
+        name: 'BOARD',
         desc: 'Board descriptions',
         closed: false,
         subscribed: false,
-        idOrganization: '',
+        idOrganization: 'ORGANIZATION_ID',
         prefs_permissionLevel: 'private',
         prefs_selfJoin: true,
         prefs_cardCovers: true,
@@ -23,19 +23,18 @@ let boardRequest = async function () {
         prefs_background: 'blue',
         prefs_cardAging: 'regular',
         prefs_calendarFeedEnabled: false,
-        labelNames_green: '',
-        labelNames_yellow: '',
-        labelNames_orange: '',
-        labelNames_red: '',
-        labelNames_purple: '',
-        labelNames_blue: ''
+        labelNames_green: 'Test Label 1',
+        labelNames_yellow: 'Test Label 2',
+        labelNames_orange: 'Test Label 3',
+        labelNames_red: 'Test Label 4',
+        labelNames_purple: 'Test Label 5',
+        labelNames_blue: 'Test Label 6'
     };
     let response = await Trello.board.update(id, data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

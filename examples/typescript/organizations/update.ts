@@ -7,13 +7,13 @@ const Trello = new TrelloNodeAPI();
 let organizationRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'ORGANIZATION_ID';
-    let  data = {
+    let id = 'ORGANIZATION_ID'; // REQUIRED
+    let data = {
         name: 'or123',
         displayName: 'ORGANIZATION_DISPLAY_NAME',
         desc: 'Organization descriptions',
-        website: '',
-        prefs_associatedDomain: '',
+        website: 'https://example.com',
+        prefs_associatedDomain: 'trello.com',
         prefs_externalMembersDisabled: false,
         prefs_googleAppsVersion: 1,
         prefs_boardVisibilityRestrict_org: 'none',
@@ -27,7 +27,6 @@ let organizationRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

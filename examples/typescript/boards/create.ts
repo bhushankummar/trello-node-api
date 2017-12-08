@@ -8,12 +8,12 @@ let boardRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
     let data = {
-        name: 'BOARD_TEST',
+        name: 'BOARD_NAME', // REQUIRED
         defaultLabels: false,
         defaultLists: false,
         desc: 'Board description.',
-        idOrganization: 'BOARD123456789',
-        idBoardSource: 'BOARD123456789',
+        idOrganization: 'ORGANIZATION_ID',
+        idBoardSource: 'BOARD_ID',
         keepFromSource: 'none',
         powerUps: 'all',
         prefs_permissionLevel: 'private',
@@ -30,7 +30,6 @@ let boardRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

@@ -7,14 +7,14 @@ const Trello = new TrelloNodeAPI();
 let cardRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'CARD_ID';
+    let id = 'CARD_ID'; // REQUIRED
     let data = {
         name: 'CARD_NAME_TEST',
         desc: 'Card description',
         closed: false,
         idMembers: 'MEMBER_ID,MEMBER_ID,MEMBER_ID',
-        idAttachmentCover: '',
-        idList: '',
+        idAttachmentCover: null,
+        idList: 'LIST_ID',
         idLabels: 'LABEL_ID, LABEL_ID, LABEL_ID',
         idBoard: false,
         pos: 'top',
@@ -27,7 +27,6 @@ let cardRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

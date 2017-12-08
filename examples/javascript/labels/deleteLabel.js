@@ -4,8 +4,7 @@ var oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
 var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var labelRequest = function () {
-    var id = 'LABEL_ID';
-    Trello.label.del(id).then(function (response) {
+    Trello.label.del('LABEL_ID').then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);

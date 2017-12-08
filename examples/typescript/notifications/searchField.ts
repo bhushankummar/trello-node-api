@@ -12,7 +12,6 @@ let notificationRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

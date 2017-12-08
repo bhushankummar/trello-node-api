@@ -5,9 +5,9 @@ var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var labelRequest = function () {
     var data = {
-        name: 'LABEL_NAME',
-        color: 'orange',
-        idBoard: 'BOARD_ID'
+        name: 'LABEL_NAME', // REQUIRED
+        color: 'orange', // REQUIRED
+        idBoard: 'BOARD_ID' // REQUIRED
     };
     Trello.label.create(data).then(function (response) {
         console.log('response ', response);

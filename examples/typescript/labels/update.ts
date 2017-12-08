@@ -7,14 +7,16 @@ const Trello = new TrelloNodeAPI();
 let labelRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'LABEL_ID';
-    let data = {name: 'NAME', color: 'red'};
+    let id = 'LABEL_ID'; // REQUIRED
+    let data = {
+        name: 'NAME',
+        color: 'red'
+    };
     let response = await Trello.label.update(id, data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

@@ -8,16 +8,15 @@ let labelRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
     let data = {
-        name: 'LABEL_NAME',
-        color: 'orange',
-        idBoard: 'BOARD_ID'
+        name: 'LABEL_NAME', // REQUIRED
+        color: 'orange', // REQUIRED
+        idBoard: 'BOARD_ID' // REQUIRED
     };
     let response = await Trello.label.create(data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

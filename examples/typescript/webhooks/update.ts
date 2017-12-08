@@ -7,11 +7,11 @@ const Trello = new TrelloNodeAPI();
 let webhookRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'WEBHOOK_ID';
+    let id = 'WEBHOOK_ID'; // REQUIRED
     let data = {
         displayName: 'ORGANIZATION_DISPLAY_NAME',
         description: 'Webhook descriptions',
-        callbackURL: '',
+        callbackURL: 'https://mycallbackurl.com/',
         idModel: 'MODEL_ID',
         active: false
     };
@@ -20,7 +20,6 @@ let webhookRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

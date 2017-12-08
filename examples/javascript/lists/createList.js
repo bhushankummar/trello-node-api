@@ -5,9 +5,9 @@ var Trello = require('../../../lib/trello-node-api')(apiKey, oauthToken);
 
 var listRequest = function () {
     var data = {
-        name: 'LIST_NAME',
-        idBoard: 'BOARD_ID',
-        idListSource: '',
+        name: 'LIST_NAME', // REQUIRED
+        idBoard: 'BOARD_ID', // REQUIRED
+        idListSource: 'LIST_ID',
         pos: 'top'
     };
     Trello.list.create(data).then(function (response) {

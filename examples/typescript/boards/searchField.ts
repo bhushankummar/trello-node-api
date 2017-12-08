@@ -12,7 +12,6 @@ let boardRequest = async function () {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 

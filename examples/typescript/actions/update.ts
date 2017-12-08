@@ -7,14 +7,15 @@ const Trello = new TrelloNodeAPI();
 let actionRequest = async function () {
     Trello.setApiKey(apiKey);
     Trello.setOauthToken(oauthToken);
-    let id = 'ACTION_ID';
-    let data = {text: 'text'};
+    let id = 'ACTION_ID'; // REQUIRED
+    let data = {
+        text: 'text' // REQUIRED
+    };
     let response = await Trello.action.update(id, data).catch(error => {
         if (error) {
             console.log('error ', error);
         }
     });
-
     console.log('response', response);
 };
 
