@@ -1,5 +1,3 @@
-import {assert} from 'chai';
-
 /* tslint:disable:no-string-literal */
 describe('Board', () => {
 
