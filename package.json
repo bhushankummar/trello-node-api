@@ -46,17 +46,18 @@
         "safe-buffer": "^5.1.1"
     },
     "devDependencies": {
-        "@types/chai": "^4.0.8",
+        "trello-node-api": "0.0.5",
+        "@types/chai": "^4.0.10",
         "@types/mocha": "^2.2.44",
         "chai": "^4.1.2",
         "chai-as-promised": "~7.1.1",
         "mocha": "^4.0.1",
-        "ts-mocha": "^1.0.3",
+        "ts-node": "^4.0.1",
         "typescript": "^2.6.2"
     },
     "license": "MIT",
     "scripts": {
         "lint": "tsc index.d.ts",
-        "test": "ts-mocha -p test/**/*.spec.ts"
+        "test": "mocha -r ts-node/register test/**/*.spec.ts"
     }
 }
