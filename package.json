@@ -58,6 +58,6 @@
     "license": "MIT",
     "scripts": {
         "lint": "tsc index.d.ts",
-        "test": "mocha -r ts-node/register test/**/*.spec.ts"
+        "test": "npm run lint; mocha -r ts-node/register test/**/*.spec.ts"
     }
 }
