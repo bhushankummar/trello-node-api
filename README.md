@@ -30,6 +30,30 @@ var trelloNode = require('trello-node-api')(apiKey, oauthToken);
 
 ##### It does supports EcmaScript 5, EcmaScript 6, TypeScript, async-await, Promises, Callback !
 
+## Documentation
+
+####[Actions](https://github.com/bhushankumarl/trello-node-api/wiki/Actions-TypeScript)
+
+####[Boards](https://github.com/bhushankumarl/trello-node-api/wiki/Boards-TypeScript)
+
+####[Cards](https://github.com/bhushankumarl/trello-node-api/wiki/Cards-TypeScript)
+
+####[Checklists](https://github.com/bhushankumarl/trello-node-api/wiki/Checklists-TypeScript)
+
+####[Enterprises](https://github.com/bhushankumarl/trello-node-api/wiki/Enterprises-TypeScript)
+
+####[Labels](https://github.com/bhushankumarl/trello-node-api/wiki/Labels-TypeScript)
+
+####[Lists](https://github.com/bhushankumarl/trello-node-api/wiki/Lists-TypeScript)
+
+####[Members](https://github.com/bhushankumarl/trello-node-api/wiki/Members-TypeScript)
+
+####[Notifications](https://github.com/bhushankumarl/trello-node-api/wiki/Notifications-TypeScript)
+
+####[Organizations](https://github.com/bhushankumarl/trello-node-api/wiki/Organizations-TypeScript)
+
+####[Webhooks](https://github.com/bhushankumarl/trello-node-api/wiki/Webhooks-TypeScript)
+
 ##### Please Feel free to create Issue for any help !
 
 Originally by [Bhushankumar Lilapara](https://github.com/bhushankumarl) (bhushankumar.lilapara@gmail.com).
