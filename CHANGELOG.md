@@ -1,3 +1,7 @@
+0.0.6 June 06, 2018
+  - Added documentation for example
+  - Added basic test cases
+  
 0.0.5 December 06, 2017
   - Bug fix
   

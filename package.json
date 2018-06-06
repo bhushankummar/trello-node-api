@@ -1,6 +1,6 @@
 {
     "name": "trello-node-api",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Trello Node API wrapper",
     "keywords": [
         "node-trello",
@@ -46,7 +46,6 @@
         "safe-buffer": "^5.1.1"
     },
     "devDependencies": {
-        "trello-node-api": "0.0.5",
         "@types/chai": "^4.0.10",
         "@types/mocha": "^2.2.44",
         "chai": "^4.1.2",
@@ -58,6 +57,6 @@
     "license": "MIT",
     "scripts": {
         "lint": "tsc index.d.ts",
-        "test": "npm run lint; mocha -r ts-node/register test/**/*.spec.ts"
+        "test.mocha": "npm run lint; mocha -r ts-node/register test/**/*.spec.ts"
     }
 }

@@ -12,8 +12,6 @@ $ npm install trello-node-api --save
 
 ## Debugging
 
-Run the DEBUG:
-
 ```bash
 $ export DEBUG=TA:*
 ```
@@ -30,7 +28,7 @@ var trelloNode = require('trello-node-api')(apiKey, oauthToken);
 
 ##### It does supports EcmaScript 5, EcmaScript 6, TypeScript, async-await, Promises, Callback !
 
-## Documentation
+## Examples
 
 #### [Actions](https://github.com/bhushankumarl/trello-node-api/wiki/Actions-TypeScript)
 
