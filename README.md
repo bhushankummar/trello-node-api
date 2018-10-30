@@ -1,4 +1,5 @@
 # trello-node-api (Trello REST API)
+[![Version](https://img.shields.io/npm/v/trello-node-api.svg)](https://www.npmjs.org/package/trello-node-api)
 [![Build Status](https://travis-ci.org/bhushankumarl/trello-node-api.svg?branch=master)](https://travis-ci.org/bhushankumarl/trello-node-api)
 
 This API supported Trello's standard REST-style API that accepts/returns JSON requests and Here is the [API reference] (https://developers.trello.com/v1.0/reference)
