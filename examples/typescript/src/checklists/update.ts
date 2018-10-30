@@ -14,7 +14,7 @@ let checklistRequest = async function () {
     };
     let response;
     try {
-        response = await Trello.checklist.update(id, data)
+        response = await Trello.checklist.update(id, data);
     } catch (error) {
         if (error) {
             console.log('error ', error);

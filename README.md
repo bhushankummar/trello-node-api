@@ -14,13 +14,13 @@ You can find [examples here](https://github.com/bhushankumarl/trello-node-api/tr
 
 ## Installation
 ```bash
-$ npm install trello-node-api --save
+npm install trello-node-api --save
 ```
 
 ## Debugging
 
 ```bash
-$ export DEBUG=TA:*
+export DEBUG=TA:*
 ```
 
 ## Configuration
