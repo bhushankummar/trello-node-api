@@ -41,6 +41,7 @@
     "main": "lib/trello-node-api",
     "dependencies": {
         "bluebird": "^3.5.0",
+        "debug": "^4.1.0",
         "lodash.isplainobject": "^4.0.6",
         "qs": "~6.5.1",
         "safe-buffer": "^5.1.1"

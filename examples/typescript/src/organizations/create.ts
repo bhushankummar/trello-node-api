@@ -15,7 +15,7 @@ let organizationRequest = async function () {
     };
     let response;
     try {
-        response = await Trello.organization.create(data)
+        response = await Trello.organization.create(data);
     } catch (error) {
         if (error) {
             console.log('error ', error);
