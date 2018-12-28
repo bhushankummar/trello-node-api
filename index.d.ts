@@ -25,6 +25,8 @@ declare class TrelloBoard {
     del(boardId: string): Promise<any>;
 
     searchCards(boardId: string): Promise<any>;
+    
+    searchClosedCards(boardId: string): Promise<any>;
 
 }
 
