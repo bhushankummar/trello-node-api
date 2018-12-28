@@ -1,6 +1,6 @@
 {
     "name": "trello-node-api",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Trello Node API wrapper",
     "keywords": [
         "node-trello",
