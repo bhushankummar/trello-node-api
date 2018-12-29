@@ -1,22 +1,32 @@
-const apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
-const oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
+import {CONFIG} from '../intialize';
+import * as TrelloNodeAPI from '../../lib/trello-node-api';
 
-import * as TrelloNodeAPI from 'trello-node-api';
+import * as chai from 'chai';
+
+const expect = chai.expect;
+
+const apiKey = CONFIG.TRELLO_API_KEY;
+const oauthToken = CONFIG.TRELLO_OAUTH_TOKEN;
 
 const Trello = new TrelloNodeAPI();
 Trello.setApiKey(apiKey);
 Trello.setOauthToken(oauthToken);
-import {mocha} from 'mocha'
-/* tslint:disable:no-string-literal */
-describe('Board', () => {
 
-    it('It should create the Board', async () => {
+let boardDocument: any = {};
+describe('Board', function () {
+
+    before(function () {
+        expect(apiKey).to.be.a('string');
+        expect(oauthToken).to.be.a('string');
+    });
+
+    it('It should create the Board', async function () {
+        const boardName = 'Auto generated board ' + new Date().getUTCMilliseconds();
         let data = {
-            name: 'BOARD_NAME_1', // REQUIRED
+            name: boardName, // REQUIRED
             defaultLabels: false,
             defaultLists: false,
-            desc: 'Board description.',
-            idOrganization: 'ORGANIZATION_ID',
+            desc: 'This is test board. Here is the Board description.',
             keepFromSource: 'none',
             powerUps: 'all',
             prefs_permissionLevel: 'private',
@@ -28,13 +38,25 @@ describe('Board', () => {
             prefs_background: 'blue',
             prefs_cardAging: 'regular'
         };
-        let response = await Trello.board.create(data).catch(error => {
-            if (error) {
-                console.log('error ', error);
-                return;
-            }
-        });
-        console.log('response', response);
+        try {
+            let response = await Trello.board.create(data);
+            console.log('response', response);
+            boardDocument = response;
+            expect(response).to.be.a('object');
+        } catch (error) {
+            console.log('error ', error);
+            expect(error).to.be.undefined;
+        }
     });
 
+    it('It should delete the Board', async function () {
+        try {
+            let response = await Trello.board.del(boardDocument.id);
+            console.log('response', response);
+            expect(response).to.be.a('object');
+        } catch (error) {
+            console.log('error ', error);
+            expect(error).to.be.undefined;
+        }
+    });
 });

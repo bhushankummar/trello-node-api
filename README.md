@@ -46,10 +46,8 @@ trello.setOauthToken('oauthToken');
 - Kindly validate test cases & linting before opening new PR.
 
 ## Do you need an expert?
-Are you finding a developer for your word class product? If yes, please contact here. [Submit your project request here.](https://goo.gl/forms/UofdG5GY5iHMoUWg2)
-```
-Originally by [Bhushankumar Lilapara](https://github.com/bhushankumarl) (bhushankumar.lilapara@gmail.com).
-```
+Are you finding a developer for your world-class product? If yes, please contact here. [Submit your project request here.](https://goo.gl/forms/UofdG5GY5iHMoUWg2)
+Originally by [Bhushankumar L](mailto:bhushankumar.lilapara@gmail.com).
 
 ## Examples
 
@@ -206,6 +204,24 @@ Originally by [Bhushankumar Lilapara](https://github.com/bhushankumarl) (bhushan
         actions: 'all'
     };
     Trello.board.search(boardId, fields).then(function (response) {
+        console.log('response ', response);
+    }).catch(function (error) {
+        console.log('error', error);
+    });    
+```
+
+#### Search Cards
+```
+    Trello.board.searchCards('BOARD_ID').then(function (response) {
+        console.log('response ', response);
+    }).catch(function (error) {
+        console.log('error', error);
+    });    
+```
+
+#### Search Closed Cards
+```
+    Trello.board.searchCardsFilter('BOARD_ID', 'closed').then(function (response) {
         console.log('response ', response);
     }).catch(function (error) {
         console.log('error', error);
@@ -677,3 +693,4 @@ Originally by [Bhushankumar Lilapara](https://github.com/bhushankumarl) (bhushan
         console.log('error', error);
     });    
 ```
+
