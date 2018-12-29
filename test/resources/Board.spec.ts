@@ -1,12 +1,12 @@
-const apiKey = process.env.TRELLO_API_KEY || 'YOUR_API_KEY';
-const oauthToken = process.env.TRELLO_OAUTH_TOKEN || 'OAUTH_TOKEN';
-
+import {CONFIG} from '../intialize';
 import * as TrelloNodeAPI from 'trello-node-api';
+
+const apiKey = CONFIG.TRELLO_API_KEY;
+const oauthToken = CONFIG.TRELLO_OAUTH_TOKEN;
 
 const Trello = new TrelloNodeAPI();
 Trello.setApiKey(apiKey);
 Trello.setOauthToken(oauthToken);
-import {mocha} from 'mocha'
 /* tslint:disable:no-string-literal */
 describe('Board', () => {
 
@@ -28,12 +28,7 @@ describe('Board', () => {
             prefs_background: 'blue',
             prefs_cardAging: 'regular'
         };
-        let response = await Trello.board.create(data).catch(error => {
-            if (error) {
-                console.log('error ', error);
-                return;
-            }
-        });
+        let response = await Trello.board.create(data);
         console.log('response', response);
     });
 
