@@ -1,3 +1,12 @@
+0.0.8
+  - Upgrade library to latest version.
+  - Search boards using the custom fields
+  - Add Custom Fields Method in Board API & Card API
+
+0.0.7 December 29, 2018
+  - Add support for the cards filters
+  - Make the test cases runnable properly  
+  
 0.0.6 June 06, 2018
   - Added documentation for example
   - Added basic test cases

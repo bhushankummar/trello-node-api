@@ -28,6 +28,8 @@ declare class TrelloBoard {
 
     searchCardsFilter(boardId: string, filter: string): Promise<any>;
 
+    getCustomField(customFieldId: string): Promise<any>;
+
 }
 
 declare class TrelloCard {
@@ -41,6 +43,8 @@ declare class TrelloCard {
     update(cardId: string, params: any): Promise<any>;
 
     del(cardId: string): Promise<any>;
+
+    setCustomField(cardId: string, customFieldId: string): Promise<any>;
 
 }
 
@@ -57,6 +61,21 @@ declare class TrelloChecklist {
     del(checklistId: string): Promise<any>;
 
 }
+
+declare class TrelloCustomField {
+
+    create(params: any): Promise<any>;
+
+    search(customFieldId: string): Promise<any>;
+
+    searchField(customFieldId: string, fieldName: string): Promise<any>;
+
+    update(customFieldId: string, params: any): Promise<any>;
+
+    del(customFieldId: string): Promise<any>;
+
+}
+
 
 declare class TrelloEnterprise {
 
@@ -151,6 +170,7 @@ declare class TrelloNodeApi {
     board: TrelloBoard;
     card: TrelloCard;
     checklist: TrelloChecklist;
+    customField: TrelloCustomField;
     enterprise: TrelloEnterprise;
     label: TrelloLabel;
     list: TrelloList;
