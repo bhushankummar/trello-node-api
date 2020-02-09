@@ -1,3 +1,6 @@
+0.0.9
+  - Added New Search Methods in Boards API & Cards API
+
 0.0.8
   - Upgrade library to latest version.
   - Search boards using the custom fields
