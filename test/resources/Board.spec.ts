@@ -1,4 +1,5 @@
-import {CONFIG} from '../intialize';
+import { CONFIG } from '../initialize';
+// @ts-ignore
 import * as TrelloNodeAPI from '../../lib/trello-node-api';
 
 import * as chai from 'chai';
