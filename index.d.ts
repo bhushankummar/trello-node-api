@@ -58,6 +58,13 @@ declare class TrelloChecklist {
 
 }
 
+declare class TrelloCustomField {
+
+  setCustomField(cardId: string, customFieldId: string, params: any): Promise<any>;
+
+}
+
+
 declare class TrelloEnterprise {
 
     search(enterpriseID: string): Promise<any>;
@@ -151,6 +158,7 @@ declare class TrelloNodeApi {
     board: TrelloBoard;
     card: TrelloCard;
     checklist: TrelloChecklist;
+    customField: TrelloCustomField;
     enterprise: TrelloEnterprise;
     label: TrelloLabel;
     list: TrelloList;
