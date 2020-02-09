@@ -28,7 +28,23 @@ declare class TrelloBoard {
 
     searchCardsFilter(boardId: string, filter: string): Promise<any>;
 
-    getCustomField(customFieldId: string): Promise<any>;
+    searchChecklists(boardId: string): Promise<any>;
+
+    searchCustomField(boardId: string): Promise<any>;
+
+    searchLabels(boardId: string): Promise<any>;
+
+    searchLists(boardId: string): Promise<any>;
+
+    searchListsFilter(boardId: string, filter: string): Promise<any>;
+
+    searchMembers(boardId: string): Promise<any>;
+
+    searchMemberships(boardId: string): Promise<any>;
+
+    searchPlugins(boardId: string): Promise<any>;
+
+    searchCardsByCardId(boardId: string, cardId: string): Promise<any>;
 
 }
 
@@ -45,6 +61,34 @@ declare class TrelloCard {
     del(cardId: string): Promise<any>;
 
     setCustomField(cardId: string, customFieldId: string): Promise<any>;
+
+    searchActions(cardId: string): Promise<any>;
+
+    searchAttachments(cardId: string): Promise<any>;
+
+    searchAttachmentByAttachmentId(cardId: string, attachmentId: string): Promise<any>;
+
+    searchBoard(cardId: string): Promise<any>;
+
+    searchCheckItemStates(cardId: string): Promise<any>;
+
+    searchChecklists(cardId: string): Promise<any>;
+
+    searchCheckItemByCheckItemId(cardId: string, checkItemId: string): Promise<any>;
+
+    searchCustomFieldItems(cardId: string): Promise<any>;
+
+    searchList(cardId: string): Promise<any>;
+
+    searchMembers(cardId: string): Promise<any>;
+
+    searchMembersVoted(cardId: string): Promise<any>;
+
+    searchPluginData(cardId: string): Promise<any>;
+
+    searchStickers(cardId: string): Promise<any>;
+
+    searchStickersByStickerId(cardId: string, stickerId: string): Promise<any>;
 
 }
 
